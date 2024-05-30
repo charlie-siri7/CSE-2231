@@ -1,0 +1,19 @@
+PROGRAM ProgramTest IS
+
+  INSTRUCTION one IS
+    infect
+  END one
+  
+  INSTRUCTION two IS
+    turnleft
+    move
+  END two
+
+BEGIN
+  WHILE true DO
+    one
+  END WHILE
+  IF next-is-enemy THEN
+    two
+  END IF
+END ProgramTest

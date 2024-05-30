@@ -1,0 +1,31 @@
+PROGRAM ProgramTest2 IS
+  
+  INSTRUCTION one IS
+    turnleft
+    move
+  END one
+  
+  INSTRUCTION two IS
+    infect
+  END two
+  
+  INSTRUCTION three IS
+    infect
+    infect
+    move
+  END three
+
+BEGIN
+  IF next-is-enemy THEN
+    two
+  END IF
+  IF next-is-friend THEN
+    one
+    three
+  ELSE
+    two
+  END IF
+  WHILE random DO
+    three
+  END WHILE
+END ProgramTest2
