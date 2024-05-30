@@ -1,0 +1,21 @@
+PROGRAM TEST IS
+
+  INSTRUCTION five IS
+    move
+    move
+  END five
+
+  INSTRUCTION six IS
+     turnleft
+  END six
+
+BEGIN
+  WHILE true DO
+    five
+    six
+    IF next-is-enemy THEN
+      infect
+    END IF
+  END WHILE
+  five
+END TEST

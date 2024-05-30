@@ -1,0 +1,38 @@
+PROGRAM t-e-s-t IS
+
+  INSTRUCTION seven IS
+     IF next-is-enemy THEN
+       infect
+     END IF
+     IF next-is-wall THEN
+       turnleft
+       turnleft
+     END IF     
+  END seven
+  
+  INSTRUCTION eight IS
+    IF next-is-not-empty THEN
+      turnright
+      seven
+    ELSE
+      move
+      seven
+    END IF
+  END eight
+
+BEGIN
+  WHILE true DO
+    IF next-is-empty THEN
+      move
+    ELSE 
+      IF next-is-wall THEN
+        seven
+        eight
+      END IF
+      IF next-is-enemy THEN
+        eight
+        seven
+      END IF
+    END IF
+  END WHILE
+END t-e-s-t

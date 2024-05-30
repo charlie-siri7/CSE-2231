@@ -1,0 +1,27 @@
+PROGRAM test IS
+
+  INSTRUCTION four IS
+    three
+    infect
+  END four
+
+  INSTRUCTION three IS
+     turnright
+     IF next-is-empty THEN
+        move
+     END IF
+     infect
+  END three
+
+BEGIN
+  WHILE true DO
+    move
+    turnright
+    IF next-is-enemy THEN
+      four
+    ELSE
+      three
+    END IF
+  END WHILE
+  four
+END test

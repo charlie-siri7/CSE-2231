@@ -1,0 +1,16 @@
+IF next-is-enemy THEN
+  infect
+  turnleft
+  move
+  move
+  IF next-is-friend THEN
+  END IF
+ELSE
+  WHILE next-is-not-wall DO
+    move
+    go-for-it
+    look-for-something
+  END WHILE
+  turnright
+  turnright
+END IF
